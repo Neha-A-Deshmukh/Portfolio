@@ -1825,7 +1825,6 @@ and moved to the corresponding sections. later
 				left: 0;
 				width: 100%;
 				height: 100%;
-				background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cstyle%3Eline %7B stroke-width: 0.25px%3B stroke: %23ffffff%3B %7D%3C/style%3E%3Cline x1='0' y1='0' x2='100' y2='100' /%3E%3Cline x1='100' y1='0' x2='0' y2='100' /%3E%3C/svg%3E");
 				background-position: center;
 				background-repeat: no-repeat;
 				background-size: 100% 100%;
@@ -2021,7 +2020,7 @@ and moved to the corresponding sections. later
 
 /* Word from the Maker */
 .note {
-    color: black;
+    color: #fff;
 }
 
 .mobile-image {
@@ -2293,15 +2292,6 @@ and moved to the corresponding sections. later
 				top: -0.2em;
 			}
 
-			.icon.circle.fa-twitter {
-				background: #70aecd;
-				color: #fff;
-			}
-
-				.icon.circle.fa-twitter:hover {
-					background: #7fb7d2;
-				}
-
 			.icon.circle.fa-facebook-f {
 				background: #7490c3;
 				color: #fff;
@@ -2310,33 +2300,32 @@ and moved to the corresponding sections. later
 				.icon.circle.fa-facebook-f:hover {
 					background: #829bc9;
 				}
-
-			.icon.circle.fa-google-plus-g {
-				background: #db6b67;
+			/* Instagram Icon */
+			.icon.circle.fa-instagram {
+				background: #E4405F; /* Instagram's primary color */
 				color: #fff;
 			}
-
-				.icon.circle.fa-google-plus-g:hover {
-					background: #df7b77;
-				}
-
-			.icon.circle.fa-github {
-				background: #dcad8b;
-				color: #fff;
+				.icon.circle.fa-instagram:hover {
+				background: #EC6680; /* Lighter shade for hover effect */
 			}
 
-				.icon.circle.fa-github:hover {
-					background: #e1b89b;
-				}
-
-			.icon.circle.fa-dribbble {
-				background: #da83ae;
+			/* Medium Icon */
+			.icon.circle.fa-medium {
+				background: #00ab6c; /* Medium's primary color */
 				color: #fff;
 			}
+				.icon.circle.fa-medium:hover {
+				background: #33bc89; /* Lighter shade for hover effect */
+			}
 
-				.icon.circle.fa-dribbble:hover {
-					background: #df93b8;
-				}
+			/* LinkedIn Icon */
+			.icon.circle.fa-linkedin-in {
+				background: #0077b5; /* LinkedIn's primary color */
+				color: #fff;
+			}
+				.icon.circle.fa-linkedin-in:hover {
+				background: #338cc2; /* Lighter shade for hover effect */
+			}
 
 		.icon.featured {
 			cursor: default;
@@ -2394,14 +2383,14 @@ and moved to the corresponding sections. later
 			}
 
 /* Testimonial Section Styling */
+
 .testimonial-section {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 400px;
-    padding: 50px 0;
-	/* background-color: #83d3c9; */
 	border-radius: 10px;
+	background-color: #fdebd0;
 }
 
 .testimonial-container {
@@ -2415,7 +2404,6 @@ and moved to the corresponding sections. later
     position: absolute;
     width: 100%;
     height: 100%;
-    background: white;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     opacity: 0;
@@ -2433,10 +2421,19 @@ and moved to the corresponding sections. later
 }
 
 .testimonial-text {
-    font-size: 18px;
-    color: #333;
+    font-size: 20px;
+    color: #000;
     font-style: italic;
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
+}
+
+@media screen and (max-width: 500px)
+{
+	.testimonial-text {
+		font-size: 14px;
+		color: #000;
+		font-style: italic;
+	}
 }
 
 
@@ -2450,7 +2447,7 @@ and moved to the corresponding sections. later
     height: 10px;
     width: 10px;
     margin: 0 5px;
-    background-color: #fff;
+    background-color: #717171;
     border-radius: 50%;
     display: inline-block;
     transition: background-color 0.6s ease;
@@ -2458,7 +2455,7 @@ and moved to the corresponding sections. later
 }
 
 .dot.active {
-    background-color: #717171;
+    background-color: #90f809;
 }
 
 /* Buttons */
@@ -2610,8 +2607,7 @@ and moved to the corresponding sections. later
 		}
 
 		.wrapper.style2 {
-			background-color: #83d3c9;
-			background-image: url("images/light-bl.svg"), url("images/light-br.svg");
+			background-color: #645862; 
 			background-position: bottom left, bottom right;
 			background-repeat: no-repeat, no-repeat;
 			background-size: 25em, 25em;
@@ -2633,7 +2629,7 @@ and moved to the corresponding sections. later
 			.wrapper.style2 .button.primary {
 				background: #fff;
 				border-color: #fff;
-				color: #83d3c9 !important;
+				color: #645862 !important;
 			}
 
 				.wrapper.style2 input[type="button"].primary:hover,
@@ -2925,10 +2921,12 @@ and moved to the corresponding sections. later
 	#banner {
 		background-attachment: scroll, scroll, scroll, fixed;
 		background-color: #645862;
-		background-image: url("images/light-bl.svg"), url("images/light-br.svg"), url("images/overlay.png"), url("../../images/banner.jpg");
+		/* background-image: url("/images/banner01.avif"); */
 		background-position: bottom left, bottom right, top left, top center;
 		background-repeat: no-repeat, no-repeat, repeat, no-repeat;
-		background-size: 25em, 25em, auto, cover;
+		/* background-size: 25em, 25em, auto, cover; */
+		background-size: 100%;
+		/* opacity: 50%; */
 		color: #fff;
 		cursor: default;
 		padding: 6em 0;
@@ -2950,6 +2948,7 @@ and moved to the corresponding sections. later
 			opacity: 0;
 			padding: 3em;
 			text-align: center;
+			/* backdrop-filter: blur(10px); */
 		}
 
 			#banner .inner header {
@@ -2991,7 +2990,6 @@ and moved to the corresponding sections. later
 /* Main */
 
 	#main {
-		background-image: url("images/dark-tl.svg"), url("images/dark-tr.svg"), url("images/dark-bl.svg"), url("images/dark-br.svg");
 		background-position: top left, top right, bottom left, bottom right;
 		background-repeat: no-repeat;
 		background-size: 25em;
@@ -3023,7 +3021,6 @@ and moved to the corresponding sections. later
 	#cta {
 		background-attachment: scroll, scroll, scroll, fixed;
 		background-color: #645862;
-		background-image: url("images/light-tl.svg"), url("images/light-tr.svg"), url("images/overlay.png"), url("../../images/banner.jpg");
 		background-position: top left, top right, top left, bottom center;
 		background-repeat: no-repeat, no-repeat, repeat, no-repeat;
 		background-size: 25em, 25em, auto, cover;
@@ -3067,7 +3064,19 @@ and moved to the corresponding sections. later
 					border: 0;
 				}
 
-/* Wide */
+/* ==================================================
+   	Media Section
+   ==================================================
+   Description: This section contains size and margin
+   adjustments depending on the screen size.
+   
+   Usage: Modify if you want to make your website
+   more responsive in nature - depending on the type
+   of the device.
+=================================================== */
+
+
+/* Wide - Max Width: 1680px */
 
 	@media screen and (max-width: 1680px) {
 
@@ -3083,10 +3092,9 @@ and moved to the corresponding sections. later
 				padding-top: 5.5em;
 				margin-bottom: 4em;
 			}
-
 	}
 
-/* Normal */
+/* Normal - Max Width: 1280px */
 
 	@media screen and (max-width: 1280px) {
 
@@ -3147,10 +3155,9 @@ and moved to the corresponding sections. later
 			#footer {
 				padding: 4em;
 			}
-
 	}
 
-/* Narrow */
+/* Narrow - Max Width: 980px */
 
 	@media screen and (max-width: 980px) {
 
@@ -3222,10 +3229,9 @@ and moved to the corresponding sections. later
 				background-size: 15em, 15em, auto, cover;
 				padding: 3em;
 			}
-
 	}
 
-/* Narrower */
+/* Narrower - Max Width: 840px */
 
 	#navPanel, #navButton {
 		display: none;
@@ -3514,10 +3520,9 @@ and moved to the corresponding sections. later
 				-ms-transform: translateX(0);
 				transform: translateX(0);
 			}
-
 	}
 
-/* Mobile */
+/* Mobile - Max Width: 736px */
 
 	@media screen and (max-width: 736px) {
 
@@ -3712,5 +3717,4 @@ and moved to the corresponding sections. later
 				width: 50px;
 				height: 34px;
 			}
-
 	}
